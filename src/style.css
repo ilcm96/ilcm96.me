@@ -55,6 +55,9 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --inlineCode-bg: #fafafb;
+  --inlineCode-text: #1a1a1a;
+  --inlineCode-line-highlight: #eeeeed;
 }
 
 /* HTML elements */
