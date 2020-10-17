@@ -283,6 +283,7 @@ a:focus {
 }
 
 .bio p {
+  padding-top: 10px;
   margin-bottom: var(--spacing-0);
 }
 

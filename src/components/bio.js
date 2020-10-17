@@ -53,11 +53,8 @@ const Bio = () => {
       )}
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
+          Written by
+          <a href="https://github.com/ilcm96"> Yun Seongmin</a>
         </p>
       )}
     </div>
