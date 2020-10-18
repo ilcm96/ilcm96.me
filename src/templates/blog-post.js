@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Comment from "../components/comment"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -36,6 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
         <footer>
           <Bio />
+          <Comment />
         </footer>
       </article>
       <nav className="blog-post-nav">
