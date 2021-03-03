@@ -134,7 +134,7 @@ module.exports = {
         short_name: `ilcm96.log`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#4a9ae1`,
         display: `minimal-ui`,
         icon: `content/assets/profile-pic.jpg`,
       },
