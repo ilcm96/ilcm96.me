@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,6 +10,7 @@ import Comment from "../components/comment"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const thumbnail = getImage(post.frontmatter.thumbnail)
   const { previous, next } = data
 
   return (
@@ -27,7 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
           <p>
-            <Img fluid={post.frontmatter.thumbnail.childImageSharp.fluid} />
+            <GatsbyImage image={thumbnail} alt={"Thumbnail"} />
           </p>
         </header>
         <section
@@ -93,9 +94,7 @@ export const pageQuery = graphql`
         description
         thumbnail {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
       }
