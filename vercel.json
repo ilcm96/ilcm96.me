@@ -2,7 +2,11 @@
   "redirects": [
     {
       "source": "/2020-03-16-let-encrypt-wildcard/",
-      "destination": "/2021-03-06-let-encrypt-wildcard/"
+      "destination": "/2021-03-06-lets-encrypt-wildcard/"
+    },
+    {
+      "source": "/2020-03-16-let-encrypt-wildcard",
+      "destination": "/2021-03-06-lets-encrypt-wildcard"
     }
   ]
 }
